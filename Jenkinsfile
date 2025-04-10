@@ -6,11 +6,12 @@ pipeline {
         DOCKER_CREDENTIALS_ID = 'dockerhub'
     }
 
-    stage('Clone Repo') {
-    steps {
-        git 'https://github.com/DivyaSaiEdara/cdd_project.git'
-       }
-    }
+    stages {
+        stage('Clone Repo') {
+            steps {
+                git 'https://github.com/DivyaSaiEdara/cdd_project.git'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
