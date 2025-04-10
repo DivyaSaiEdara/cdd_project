@@ -9,8 +9,8 @@ pipeline {
     stage('Clone Repo') {
     steps {
         git 'https://github.com/DivyaSaiEdara/cdd_project.git'
+       }
     }
-}
 
         stage('Build Docker Image') {
             steps {
