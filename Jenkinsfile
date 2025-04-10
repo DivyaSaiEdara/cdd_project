@@ -2,16 +2,15 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'yourdockerhubusername/my-app'
+        IMAGE_NAME = 'divyaedara/test-image'
         DOCKER_CREDENTIALS_ID = 'dockerhub'
     }
 
-    stages {
-        stage('Clone Repo') {
-            steps {
-                git 'https://github.com/yourusername/my-app.git'
-            }
-        }
+    stage('Clone Repo') {
+    steps {
+        git 'https://github.com/DivyaSaiEdara/cdd_project.git'
+    }
+}
 
         stage('Build Docker Image') {
             steps {
